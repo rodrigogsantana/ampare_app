@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ampare"
+             x:Class="ampare.MainPage" >
+
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+        <StackLayout Padding="0,10,0,100" BackgroundColor="White" VerticalOptions="FillAndExpand" Spacing="25">
+          
+            <Image Source="ampare_logo.jpg" />
+            
+            
+            <Label FontAttributes="Bold" HorizontalTextAlignment="Center" Text="Consulte a situação do associado" TextColor="#2e3091" FontSize="Medium" HorizontalOptions="Center"/>
+            <StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
+                <Entry Keyboard="Numeric" x:Name="txtcpf" FontAttributes="Bold"  TextChanged="cpfMask" PlaceholderColor="Gray" Placeholder="DIGITE AQUI O CPF DO TITULAR!" FontSize="Small" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="40">
+               
+                <Button
+      x:Name="buttonConsultar"
+      Clicked="buttonConsultar_Clicked"
+      Text="Consultar"
+      FontSize="Small"
+      TextColor="White"
+      BackgroundColor="#0a9c33"
+      HeightRequest="60"
+      WidthRequest="150"/>
+
+                <Button
+      x:Name="buttonCancel"
+      Clicked="buttonCancel_Clicked"
+      Text="Limpar"
+      TextColor="White"
+      FontSize="Small"
+      BackgroundColor="#2e3091"
+      HeightRequest="60"
+      WidthRequest="150"/>
+                
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="30">
+                <Label x:Name="lblMensagem" Text="" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium"/>
+                
+            </StackLayout>
+
+
+            <Label Text="www.ampare.com.br" TextColor="#0094d8" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium"/>
+            <BoxView HeightRequest="75"  VerticalOptions="End" HorizontalOptions="FillAndExpand" >
+               
+            </BoxView>
+           
+        </StackLayout>
+
+
+        </ScrollView>
+    </ContentPage.Content>
+
+
+</ContentPage>
